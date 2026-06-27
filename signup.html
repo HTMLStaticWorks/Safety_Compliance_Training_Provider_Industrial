@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety | Portal Signup</title>
+  <meta name="description" content="Create a corporate safety coordinator account with Safety to manage training programs, track compliance, and download certifications.">
+  <link class="fav" rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            creamWhite: '#FFFFFF',
+            sage: '#EF4444',
+            meadow: '#DC2626',
+            honey: '#EF4444',
+            cheese: '#EF4444',
+            orange: '#DC2626',
+            forest: '#0F172A',
+            brown: '#1E293B',
+            softBeige: '#F8FAFC',
+            headingDark: '#0F172A',
+            bodyDark: '#334155',
+            mutedDark: '#64748B',
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS & FontAwesome & AOS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body class="bg-creamWhite text-bodyDark dark:bg-[#111612] dark:text-[#E2E8F0] min-h-screen flex flex-col justify-between relative overflow-x-clip font-inter">
+  
+  <!-- Floating Background Shapes -->
+  <div class="floating-shape top-24 left-10 text-cheese opacity-20">
+    <i class="fa-solid fa-helmet-safety text-8xl"></i>
+  </div>
+  <div class="floating-shape bottom-24 right-10 text-sage opacity-20 floating-shape-delay-1">
+    <i class="fa-solid fa-shield-halved text-8xl"></i>
+  </div>
+
+  <!-- Header with toggles only -->
+  <header class="w-full py-6 px-4 sm:px-8 z-10 flex justify-end items-center">
+    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+      <!-- Theme Toggle -->
+      <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun dark:hidden"></i>
+        <i class="fa-solid fa-moon hidden dark:block"></i>
+      </button>
+      
+      <!-- RTL Toggle -->
+      <button class="rtl-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all" aria-label="Toggle Layout Direction">
+        <i class="fa-solid fa-right-left rtl-flip"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Signup Card Container (Centered) -->
+  <main class="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 z-10 font-inter">
+    <div class="max-w-lg w-full bg-white/70 dark:bg-black/60 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-white/20 dark:border-white/10 shadow-2xl" data-aos="zoom-in font-inter">
+      <div class="text-center mb-8">
+        <!-- Brand Logo and Name -->
+        <a href="index.html" class="flex items-center justify-center space-x-3 rtl:space-x-reverse mb-6 group cursor-pointer font-inter">
+          <div class="w-12 h-12 bg-forest dark:bg-sage rounded-xl flex items-center justify-center shadow-lg transition-transform group-hover:scale-105">
+            <i class="fa-solid fa-shield-halved text-creamWhite dark:text-forest text-2xl"></i>
+          </div>
+          <div class="flex flex-col text-left rtl:text-right font-inter">
+            <span class="font-playfair font-bold text-2xl text-headingDark dark:text-creamWhite leading-tight tracking-wide">Safety</span>
+            <span class="text-[10px] tracking-widest uppercase font-inter text-sage dark:text-cheese font-semibold">Compliance Training</span>
+          </div>
+        </a>
+        <h2 class="font-playfair font-bold text-3xl text-headingDark dark:text-creamWhite">Create Coordinator Account</h2>
+        <p class="text-xs text-mutedDark dark:text-gray-300 mt-2 font-inter">
+          Register to manage corporate safety programs, track worker compliance, and download certificates.
+        </p>
+      </div>
+
+      <form class="inquiry-form space-y-5">
+          <div>
+            <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Contact Name</label>
+            <input type="text" required placeholder="Enter your full name" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm font-inter font-inter">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Business Entity</label>
+            <input type="text" required placeholder="Enter your business name" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+          </div>
+       
+
+        <div>
+          <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter font-inter">Email Address</label>
+          <input type="email" required placeholder="Enter your email address" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm font-inter">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Password</label>
+          <div class="relative">
+            <i class="fa-solid fa-lock absolute left-3 top-3 text-sage"></i>
+            <input type="password" id="signup-password" required placeholder="Create a strong password" class="w-full pl-10 pr-10 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <button type="button" class="toggle-password absolute right-3 top-3 text-sage hover:text-forest dark:hover:text-creamWhite focus:outline-none" data-target="signup-password" aria-label="Toggle Password Visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <!-- Password strength container -->
+          <div class="mt-2 font-inter">
+            <div id="password-strength" class="h-2 rounded bg-gray-200 w-0 transition-all duration-300"></div>
+            <span id="password-strength-text" class="text-xs mt-1 block"></span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Confirm Password</label>
+          <div class="relative">
+            <i class="fa-solid fa-lock absolute left-3 top-3 text-sage"></i>
+            <input type="password" id="confirm-password" required placeholder="Confirm your password" class="w-full pl-10 pr-10 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <button type="button" class="toggle-password absolute right-3 top-3 text-sage hover:text-forest dark:hover:text-creamWhite focus:outline-none" data-target="confirm-password" aria-label="Toggle Password Visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <label class="flex items-start space-x-2.5 rtl:space-x-reverse cursor-pointer font-inter">
+          <input type="checkbox" required class="rounded border-sage/30 text-forest focus:ring-sage h-4 w-4 bg-white/80 mt-0.5">
+          <span class="text-xs text-bodyDark dark:text-gray-300 leading-relaxed font-inter font-inter font-inter">
+            I agree to the Safety <a href="#" class="text-forest dark:text-sage font-bold hover:text-honey transition-colors">Compliance Policies</a> and <a href="#" class="text-forest dark:text-sage font-bold hover:text-honey transition-colors font-inter">Terms of Service</a>.
+          </span>
+        </label>
+
+        <button type="submit" class="bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all w-full text-sm font-inter">
+          Register  Account
+        </button>
+      </form>
+
+      <!-- Social Signups -->
+      <div class="mt-6 border-t border-sage/20 pt-6">
+        <span class="block text-center text-xs text-mutedDark dark:text-gray-400 uppercase tracking-widest mb-4">Or Sign Up With</span>
+        <div class="grid grid-cols-2 gap-3">
+          <button class="flex items-center justify-center space-x-2 rtl:space-x-reverse py-2.5 border border-sage/30 rounded-lg bg-white/80 hover:bg-white text-xs font-semibold dark:bg-[#111612]/80 dark:hover:bg-[#111612] text-bodyDark dark:text-creamWhite transition-all font-inter">
+            <i class="fa-brands fa-google text-red-500"></i>
+            <span>Google</span>
+          </button>
+          <button class="flex items-center justify-center space-x-2 rtl:space-x-reverse py-2.5 border border-sage/30 rounded-lg bg-white/80 hover:bg-white text-xs font-semibold dark:bg-[#111612]/80 dark:hover:bg-[#111612] text-bodyDark dark:text-creamWhite transition-all">
+            <i class="fa-brands fa-apple text-black dark:text-white"></i>
+            <span>Apple</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center text-xs font-inter text-mutedDark dark:text-gray-300 font-inter">
+        Already registered? <a href="login.html" class="text-forest dark:text-sage font-bold hover:text-honey transition-colors">Log in here</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Small minimal Footer just for Copyright -->
+  <footer class="w-full py-6 px-4 text-center z-10 text-xs text-mutedDark dark:text-gray-400">
+    <p>&copy; 2026 Safety Training & Compliance. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>

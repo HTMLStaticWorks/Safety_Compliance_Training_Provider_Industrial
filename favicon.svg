@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+  <!-- Rounded square background matching the website logo container -->
+  <rect width="512" height="512" rx="112" fill="#DC2626"/>
+  <!-- Safety shield icon centered -->
+  <g transform="translate(256, 256)">
+    <!-- Shield shape -->
+    <path fill="#FFFFFF" d="M0,-180 L140,-120 L140,60 Q140,150 0,190 Q-140,150 -140,60 L-140,-120 Z"/>
+    <!-- Inner shield highlight -->
+    <path fill="#0F172A" d="M0,-150 L115,-98 L115,58 Q115,132 0,168 Q-115,132 -115,58 L-115,-98 Z"/>
+    <!-- Checkmark / Hard hat symbol - using S letter for Safety -->
+    <text x="0" y="32" font-family="Arial,sans-serif" font-weight="bold" font-size="110" text-anchor="middle" fill="#FFFFFF">S</text>
+  </g>
+</svg>

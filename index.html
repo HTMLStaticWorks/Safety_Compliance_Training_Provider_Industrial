@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety | OSHA & Industrial Safety Compliance Training</title>
+  <meta name="description"
+    content="Accredited safety and compliance training in OSHA Standards, Fire Safety, and First Aid. Empower your workforce with flexible onsite and online certified courses.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            creamWhite: '#FFFFFF',
+            sage: '#EF4444',
+            meadow: '#DC2626',
+            honey: '#EF4444',
+            cheese: '#EF4444',
+            orange: '#DC2626',
+            forest: '#0F172A',
+            brown: '#1E293B',
+            softBeige: '#F8FAFC',
+            headingDark: '#0F172A',
+            bodyDark: '#334155',
+            mutedDark: '#64748B',
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS & FontAwesome & AOS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+
+<body
+  class="bg-creamWhite text-bodyDark dark:bg-[#111612] dark:text-[#E2E8F0] min-h-screen flex flex-col relative overflow-x-clip">
+  <!-- Floating Background Shapes -->
+  <div class="floating-shape top-36 left-10 text-sage opacity-10">
+    <i class="fa-solid fa-hard-hat text-8xl"></i>
+  </div>
+  <div class="floating-shape top-96 right-10 text-cheese opacity-10 floating-shape-delay-1">
+    <i class="fa-solid fa-fire-extinguisher text-9xl"></i>
+  </div>
+  <div class="floating-shape bottom-44 left-20 text-honey opacity-10 floating-shape-delay-2">
+    <i class="fa-solid fa-kit-medical text-7xl"></i>
+  </div>
+
+  <!-- Sticky Header / Navbar -->
+  <header
+    class="sticky top-0 z-50 bg-white/80 dark:bg-[#111612]/80 backdrop-blur-md border-b border-sage/10 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+          <div
+            class="w-12 h-12 bg-forest dark:bg-sage rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-shield-halved text-creamWhite dark:text-forest text-2xl"></i>
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-playfair font-bold text-2xl text-headingDark dark:text-creamWhite leading-tight tracking-wide">Safety</span>
+            <span
+              class="text-[10px] tracking-widest uppercase font-inter text-sage dark:text-cheese font-semibold">Compliance
+              Training</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden lg:flex lg:space-x-4 xl:space-x-8 rtl:space-x-reverse font-inter font-medium text-sm xl:text-base whitespace-nowrap animate-fade-in">
+          <a href="index.html"
+            class="text-forest dark:text-sage border-b-2 border-forest dark:border-sage px-1 py-2 transition-colors">Home</a>
+          <a href="home2.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Home
+            2</a>
+          <a href="about.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">About</a>
+          <a href="courses.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Courses</a>
+          <a href="pricing.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Bulk
+            Enrollment</a>
+          <a href="contact.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right CTA & Toggles -->
+        <div class="flex items-center space-x-2 md:space-x-4 rtl:space-x-reverse">
+          <!-- Theme Toggle (Desktop only) -->
+          <button
+            class="theme-toggle hidden lg:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all"
+            aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun dark:hidden"></i>
+            <i class="fa-solid fa-moon hidden dark:block"></i>
+          </button>
+
+          <!-- RTL Toggle (Desktop only) -->
+          <button
+            class="rtl-toggle hidden lg:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all"
+            aria-label="Toggle Layout Direction">
+            <i class="fa-solid fa-right-left rtl-flip"></i>
+          </button>
+
+          <!-- Signup (Desktop only) -->
+          <a href="signup.html"
+            class="hidden lg:inline-block bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg text-xs sm:text-sm">
+            Sign Up
+          </a>
+
+          <!-- Hamburger Button -->
+          <button id="mobile-menu-btn"
+            class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg border border-sage/20 text-forest dark:text-creamWhite animate-pulse"
+            aria-expanded="false" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-creamWhite dark:bg-[#1E2721] border-t border-sage/10 px-6 py-8 space-y-5 shadow-xl transition-all duration-300 rounded-b-2xl font-inter">
+      <nav class="flex flex-col space-y-2 font-medium">
+        <a href="index.html"
+          class="flex items-center justify-center text-forest dark:text-sage font-bold py-3 px-4 bg-sage/10 dark:bg-sage/5 rounded-xl transition-all duration-300">
+          <i class="fa-solid fa-house mr-3 w-5 text-center text-sage"></i>
+          <span>Home</span>
+        </a>
+        <a href="home2.html"
+          class="flex items-center justify-center text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage py-3 px-4 rounded-xl hover:bg-softBeige dark:hover:bg-forest/20 transition-all duration-300">
+          <i class="fa-solid fa-house-chimney mr-3 w-5 text-center text-mutedDark dark:text-gray-400"></i>
+          <span>Home 2</span>
+        </a>
+        <a href="about.html"
+          class="flex items-center justify-center text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage py-3 px-4 rounded-xl hover:bg-softBeige dark:hover:bg-forest/20 transition-all duration-300">
+          <i class="fa-solid fa-circle-info mr-3 w-5 text-center text-mutedDark dark:text-gray-400"></i>
+          <span>About</span>
+        </a>
+        <a href="courses.html"
+          class="flex items-center justify-center text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage py-3 px-4 rounded-xl hover:bg-softBeige dark:hover:bg-forest/20 transition-all duration-300">
+          <i class="fa-solid fa-book-open mr-3 w-5 text-center text-mutedDark dark:text-gray-400"></i>
+          <span>Courses</span>
+        </a>
+        <a href="pricing.html"
+          class="flex items-center justify-center text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage py-3 px-4 rounded-xl hover:bg-softBeige dark:hover:bg-forest/20 transition-all duration-300">
+          <i class="fa-solid fa-graduation-cap mr-3 w-5 text-center text-mutedDark dark:text-gray-400"></i>
+          <span>Bulk Enrollment</span>
+        </a>
+        <a href="contact.html"
+          class="flex items-center justify-center text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage py-3 px-4 rounded-xl hover:bg-softBeige dark:hover:bg-forest/20 transition-all duration-300">
+          <i class="fa-solid fa-envelope mr-3 w-5 text-center text-mutedDark dark:text-gray-400"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <!-- Preferences Toggles (Same Row Stack) -->
+      <div class="pt-4 border-t border-sage/10 flex justify-center space-x-4 rtl:space-x-reverse">
+        <!-- Theme Toggle (Mobile) -->
+        <button
+          class="theme-toggle w-12 h-12 flex items-center justify-center rounded-xl border border-sage/20 text-forest dark:text-creamWhite hover:bg-softBeige dark:hover:bg-forest/20 transition-all text-lg"
+          aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:block"></i>
+        </button>
+
+        <!-- RTL Toggle (Mobile) -->
+        <button
+          class="rtl-toggle w-12 h-12 flex items-center justify-center rounded-xl border border-sage/20 text-forest dark:text-creamWhite hover:bg-softBeige dark:hover:bg-forest/20 transition-all text-lg"
+          aria-label="Toggle Layout Direction">
+          <i class="fa-solid fa-right-left"></i>
+        </button>
+      </div>
+
+      <!-- Action Button -->
+      <div class="pt-2 flex justify-center font-inter">
+        <a href="signup.html"
+          class="w-48 text-center bg-forest text-creamWhite dark:bg-sage dark:text-forest py-2.5 rounded-xl font-semibold shadow-lg hover:bg-forest/90 transition-all duration-300 text-sm tracking-wide">Sign
+          Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[80vh] lg:h-[80vh] xl:h-[85vh] flex items-center overflow-hidden py-16 bg-[#0F172A]">
+    <!-- Background image container for tablet/desktop -->
+    <div class="absolute inset-0 bg-cover bg-center hidden sm:block z-0"
+      style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://teamlinx.com/wp-content/uploads/2024/12/LINX_December_ProGlowBlog_OSHASafety_Denver_CO_IMAGE.jpg');">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+      <div class="max-w-3xl mx-auto text-center text-creamWhite" data-aos="fade-up" data-aos-duration="1000">
+        <span
+          class="inline-block bg-sage/35 border border-sage/30 text-white font-semibold text-sm uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 font-inter">
+          <i class="fa-solid fa-shield-halved mr-2"></i>Accredited Compliance Training
+        </span>
+        <h1 class="font-playfair font-bold text-5xl md:text-7xl leading-tight text-white mb-6">
+          Protect Your Team. <br><span class="text-sage">Ensure OSHA Compliance.</span>
+        </h1>
+        <p class="font-inter text-lg md:text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl mx-auto">
+          Accredited safety and compliance training in OSHA Standards, Fire Safety, and First Aid. Empower your
+          workforce with flexible onsite and online certified courses.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="courses.html"
+            class="bg-sage hover:bg-sage/95 text-white font-semibold text-center px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 text-base md:text-lg">
+            Explore Courses
+          </a>
+          <a href="pricing.html"
+            class="bg-transparent hover:bg-white/10 text-white font-semibold text-center border-2 border-white/60 px-8 py-4 rounded-lg transition-all duration-300 text-base md:text-lg">
+            Request Quote
+          </a>
+        </div>
+
+        <!-- Separate hero image for 360px / mobile screen sizes -->
+        <img
+          src="https://teamlinx.com/wp-content/uploads/2024/12/LINX_December_ProGlowBlog_OSHASafety_Denver_CO_IMAGE.jpg"
+          alt="Safety Compliance Training"
+          class="block sm:hidden w-full h-56 object-cover rounded-2xl mt-8 shadow-lg border border-white/10 relative z-10 animate-fade-in">
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Artisan Cheeses -->
+  <section class="py-24 bg-white dark:bg-[#151c16] relative z-10 border-b border-sage/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Accredited
+          Programs</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">Key Safety
+          Training Courses</h2>
+        <p class="text-mutedDark dark:text-gray-300 mt-4 text-base md:text-lg">
+          Choose from our range of accredited safety courses designed to keep your workplace incident-free and
+          compliant.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-creamWhite dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-md border border-sage/10 premium-card zoom-img-container flex flex-col"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="h-64 relative overflow-hidden">
+            <img src="https://gasdetection.com/app/uploads/2024/11/Featured-Cover-Image-21.jpg.webp" alt="OSHA Training"
+              class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-orange text-creamWhite text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Popular</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">OSHA 10-Hour Course</h3>
+              <span class="text-xs bg-sage/20 text-forest dark:text-sage font-bold py-1 px-2 rounded">OSHA Card</span>
+            </div>
+            <p class="text-sm text-mutedDark dark:text-gray-300 mb-4 flex-grow">
+              Essential safety training for general industry employees. Covers hazard recognition, prevention, and
+              regulations.
+            </p>
+            <div class="border-t border-sage/10 pt-4 mt-auto">
+              <div class="grid grid-cols-2 gap-2 text-xs text-mutedDark dark:text-gray-400">
+                <div><i class="fa-regular fa-clock mr-1.5 text-honey"></i><strong>Format:</strong> Onsite / Online</div>
+                <div><i class="fa-solid fa-shield-halved mr-1.5 text-orange"></i><strong>Validity:</strong> Lifetime
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-creamWhite dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-md border border-sage/10 premium-card zoom-img-container flex flex-col"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="h-64 relative overflow-hidden">
+            <img src="https://agile4training.com/assets/images/courses/course_1813_1762855903.webp"
+              alt="First Aid & CPR" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-forest text-creamWhite text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Certified</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">First Aid & CPR Training
+              </h3>
+              <span class="text-xs bg-orange/20 text-orange font-bold py-1 px-2 rounded">First Aid</span>
+            </div>
+            <p class="text-sm text-mutedDark dark:text-gray-300 mb-4 flex-grow">
+              Hands-on emergency care training including adult CPR, choking response, and Automated External
+              Defibrillator (AED) use.
+            </p>
+            <div class="border-t border-sage/10 pt-4 mt-auto">
+              <div class="grid grid-cols-2 gap-2 text-xs text-mutedDark dark:text-gray-400">
+                <div><i class="fa-regular fa-clock mr-1.5 text-honey"></i><strong>Format:</strong> Onsite / Blended
+                </div>
+                <div><i class="fa-solid fa-shield-halved mr-1.5 text-orange"></i><strong>Validity:</strong> 2 Years
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-creamWhite dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-md border border-sage/10 premium-card zoom-img-container flex flex-col md:col-span-2 md:max-w-[calc(50%-16px)] md:mx-auto lg:col-span-1 lg:max-w-none lg:mx-0"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="h-64 relative overflow-hidden">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9ydIXkma8oE86zcyDoHNhcp43s9xq7RfkgFQlIAsmCaqX629ldTR8cNj&s=10"
+              alt="Fire Safety" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-honey text-forest text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Mandatory</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Fire Safety & Prevention
+              </h3>
+              <span class="text-xs bg-honey/20 text-orange font-bold py-1 px-2 rounded">Fire Safety</span>
+            </div>
+            <p class="text-sm text-mutedDark dark:text-gray-300 mb-4 flex-grow">
+              Practical training on workplace fire prevention, emergency evacuation plans, and live fire extinguisher
+              simulation.
+            </p>
+            <div class="border-t border-sage/10 pt-4 mt-auto">
+              <div class="grid grid-cols-2 gap-2 text-xs text-mutedDark dark:text-gray-400">
+                <div><i class="fa-regular fa-clock mr-1.5 text-honey"></i><strong>Format:</strong> Onsite Only</div>
+                <div><i class="fa-solid fa-shield-halved mr-1.5 text-orange"></i><strong>Validity:</strong> 1 Year</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="courses.html"
+          class="inline-flex items-center space-x-2 font-inter font-bold text-forest dark:text-sage hover:text-honey dark:hover:text-honey transition-colors group">
+          <span>View Our Full Course Catalog</span>
+          <i class="fa-solid fa-arrow-right group-hover:translate-x-1.5 transition-transform rtl-flip"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Farm-to-Table Story -->
+  <section class="py-24 bg-softBeige dark:bg-[#131915] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative w-full max-w-lg md:max-w-xl mx-auto lg:max-w-none" data-aos="fade-right">
+          <div
+            class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E2721] relative z-10 lg:aspect-none lg:h-[540px] xl:h-[600px]">
+            <img src="https://fera.com.my/wp-content/uploads/2022/03/Untitled-design-59-1.png" alt="Industrial training"
+              class="w-full h-auto lg:h-full lg:object-cover object-contain">
+          </div>
+          <!-- Decorative stamp overlay -->
+          <div
+            class="absolute bottom-4 right-4 lg:-bottom-8 lg:-right-8 bg-honey text-forest font-bold p-4 lg:p-6 rounded-full shadow-2xl z-20 w-28 h-28 lg:w-36 lg:h-36 flex flex-col items-center justify-center text-center border-4 border-creamWhite dark:border-[#131915]">
+            <i class="fa-solid fa-award text-xl mb-1"></i>
+            <span class="text-xs uppercase tracking-widest font-inter">100% Certified</span>
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Enterprise
+            Compliance</span>
+          <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3 mb-6">
+            Reduce Workplace Risk & Protect Your Team</h2>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-6 leading-relaxed">
+            Our industrial safety training programs are designed to protect your most valuable assets: your workers. We
+            partner with manufacturing, construction, logistics, and corporate enterprises to deliver high-impact
+            compliance programs that build an active culture of safety.
+          </p>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
+            Our OSHA-certified instructors bring decades of real-world field experience directly to your site or digital
+            screen, making complex compliance requirements understandable, memorable, and actionable for workers.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="flex items-start space-x-3 rtl:space-x-reverse">
+              <i class="fa-solid fa-graduation-cap text-2xl text-sage mt-1"></i>
+              <div>
+                <h4 class="font-playfair font-bold text-lg text-headingDark dark:text-creamWhite">Interactive Classes
+                </h4>
+                <p class="text-xs text-mutedDark dark:text-gray-400 mt-1">Engaging simulations for higher retention.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3 rtl:space-x-reverse">
+              <i class="fa-solid fa-shield-halved text-2xl text-sage mt-1"></i>
+              <div>
+                <h4 class="font-playfair font-bold text-lg text-headingDark dark:text-creamWhite">OSHA Accredited</h4>
+                <p class="text-xs text-mutedDark dark:text-gray-400 mt-1">Fully compliant cards and safety records.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cheese Crafting Process -->
+  <section class="py-24 bg-white dark:bg-[#111612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Our
+          Methodology</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">Our Training
+          Delivery Process</h2>
+        <p class="text-mutedDark dark:text-gray-300 mt-4 text-base md:text-lg">
+          We combine accredited standard safety guidelines with interactive teaching structures to produce certified,
+          competent workforces.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <!-- Connecting Line (Desktop) -->
+        <div class="hidden md:block absolute top-10 left-[12%] right-[12%] h-0.5 bg-sage/20 z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            01
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Course Selection</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Select standard compliance courses or customize training to your site's specific hazards.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            02
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Flexible Learning</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Learn through self-paced interactive online modules or expert instructor-led onsite sessions.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            03
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Skill Verification</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Complete hands-on practical assessments (CPR mannequins, fire simulation, etc.) to verify competency.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            04
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Card Issuance</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Receive accredited completion certificates instantly and official physical wallet cards by mail.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Goat Milk Cheese -->
+  <section class="py-24 bg-softBeige dark:bg-[#151c16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Safety
+            Standards</span>
+          <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3 mb-6">Why
+            Choose Our Safety Training?</h2>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-8">
+            Our safety training programs go beyond basic check-the-box compliance. We focus on practical hazard
+            prevention, active workplace safety culture, and seamless enterprise record management.
+          </p>
+
+          <div class="space-y-6">
+            <!-- Benefit 1 -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div
+                class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sage/20 text-forest dark:text-sage flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-shield-halved text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Compliance Assurance
+                </h4>
+                <p class="text-sm text-mutedDark dark:text-gray-400 mt-1">
+                  We guarantee our course curriculum stays fully updated with current OSHA revisions and state
+                  regulations.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div
+                class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sage/20 text-forest dark:text-sage flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-users text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Enterprise LMS
+                  Integration</h4>
+                <p class="text-sm text-mutedDark dark:text-gray-400 mt-1">
+                  Assign courses to thousands of workers and monitor certificate validity via our corporate dashboard.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div
+                class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sage/20 text-forest dark:text-sage flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-user-tie text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Authorized Outreach
+                  Trainers</h4>
+                <p class="text-sm text-mutedDark dark:text-gray-400 mt-1">
+                  Practical modules are led by authorized OSHA Outreach Trainers with hands-on industrial experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative w-full max-w-md mx-auto lg:max-w-none" data-aos="fade-left">
+          <div
+            class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E2721] aspect-square">
+            <img src="https://assuredsafety.uk/wp-content/uploads/2023/07/Elevating-Workplace-Safety_The-Role-of-Ongoing-Health-and-Safety-Training-and-Development_Image-1-scaled.jpg"
+              alt="Compliance instructor class" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Counter Section -->
+  <section class="py-16 bg-forest text-creamWhite dark:bg-[#1A241F] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="30">0</span>+</div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">Accredited Courses</div>
+        </div>
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="500">0</span>+</div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">Corporate Clients</div>
+        </div>
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="50">0</span>k+</div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">Workers Certified</div>
+        </div>
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="100">0</span>%</div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">Compliance Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-24 bg-white dark:bg-[#111612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Client
+          Stories</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">Trusted by
+          Safety Leaders</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-softBeige dark:bg-[#1E2721] p-8 rounded-2xl border border-sage/10 relative shadow-sm"
+          data-aos="fade-right">
+          <i class="fa-solid fa-quote-left text-4xl text-sage/20 absolute top-6 left-6"></i>
+          <p
+            class="font-inter text-base md:text-lg text-bodyDark dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">
+            "The compliance training programs have completely transformed our safety culture. Their OSHA 10-Hour course
+            is highly interactive and engaging, resulting in a 40% drop in safety incidents this year alone."
+          </p>
+          <div class="flex items-center space-x-4 rtl:space-x-reverse border-t border-sage/10 pt-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-sage/20">
+              <img src="images/chef_marcus_vane.png" alt="Marcus Vane" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-playfair font-bold text-base text-headingDark dark:text-creamWhite">Marcus Vane</h4>
+              <p class="text-xs text-mutedDark dark:text-gray-400">Director of Safety, Titan Industries</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-softBeige dark:bg-[#1E2721] p-8 rounded-2xl border border-sage/10 relative shadow-sm"
+          data-aos="fade-left">
+          <i class="fa-solid fa-quote-left text-4xl text-sage/20 absolute top-6 left-6"></i>
+          <p
+            class="font-inter text-base md:text-lg text-bodyDark dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">
+            "Safety's fire prevention and first aid programs are outstanding. The trainers brought real extinguishers
+            and CPR mannequins directly to our warehouses, giving our logistics teams true field confidence."
+          </p>
+          <div class="flex items-center space-x-4 rtl:space-x-reverse border-t border-sage/10 pt-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-sage/20">
+              <img src="images/elena_rostova.png" alt="Elena Rostova" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-playfair font-bold text-base text-headingDark dark:text-creamWhite">Elena Rostova</h4>
+              <p class="text-xs text-mutedDark dark:text-gray-400">VP of Human Resources, Apex Logistics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Partners -->
+  <section class="py-12 bg-creamWhite dark:bg-[#151c16] border-t border-b border-sage/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs uppercase tracking-widest text-mutedDark dark:text-gray-400 font-semibold mb-6">
+        Trusted by Leading Industrial Enterprises</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 lg:gap-24">
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider opacity-60 dark:opacity-75 hover:opacity-100 hover:text-forest dark:hover:text-sage hover:scale-105 transition-all duration-300 cursor-pointer flex items-center">
+          <i class="fa-solid fa-industry mr-2 text-sage dark:text-cheese"></i>TITAN INDUSTRIES
+        </span>
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider opacity-60 dark:opacity-75 hover:opacity-100 hover:text-forest dark:hover:text-sage hover:scale-105 transition-all duration-300 cursor-pointer flex items-center">
+          <i class="fa-solid fa-screwdriver-wrench mr-2 text-sage dark:text-cheese"></i>APEX LOGISTICS
+        </span>
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider opacity-60 dark:opacity-75 hover:opacity-100 hover:text-forest dark:hover:text-sage hover:scale-105 transition-all duration-300 cursor-pointer flex items-center">
+          <i class="fa-solid fa-helmet-safety mr-2 text-sage dark:text-cheese"></i>VORTEX BUILDERS
+        </span>
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider opacity-60 dark:opacity-75 hover:opacity-100 hover:text-forest dark:hover:text-sage hover:scale-105 transition-all duration-300 cursor-pointer flex items-center">
+          <i class="fa-solid fa-truck-ramp-box mr-2 text-sage dark:text-cheese"></i>GLOBAL COLD CHAIN
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wholesale CTA -->
+  <section class="py-20 bg-softBeige dark:bg-[#1A241F]" data-aos="zoom-in">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mb-6">Get a
+        Corporate Training Quote</h2>
+      <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+        Need to train a team of 10 or more? We offer bulk enrollment discounts, customized curriculums, and flexible
+        onsite scheduling. Contact our corporate accounts team for a custom quote.
+      </p>
+      <a href="pricing.html"
+        class="inline-block bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-8 py-4 rounded-lg shadow-md hover:shadow-lg transition-all">
+        Request Corporate Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-white dark:bg-[#111612] relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+      <div
+        class="w-16 h-16 bg-sage/10 dark:bg-sage/20 text-forest dark:text-sage rounded-2xl flex items-center justify-center mx-auto mb-6">
+        <i class="fa-regular fa-bell text-2xl"></i>
+      </div>
+      <h2 class="font-playfair font-bold text-3xl md:text-4xl text-headingDark dark:text-creamWhite mb-4">Stay Compliant
+        & Updated</h2>
+      <p class="text-mutedDark dark:text-gray-400 text-sm md:text-base mb-8 max-w-lg mx-auto">
+        Subscribe to receive monthly OSHA regulatory updates, industrial hazard bulletins, and safety training tips.
+      </p>
+
+      <form class="inquiry-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Enter your email address" required
+          class="flex-grow px-4 py-3 rounded-lg border border-sage/30 bg-creamWhite dark:bg-[#1E2721] text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter">
+        <button type="submit"
+          class="bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-6 py-3 rounded-lg transition-all">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="bg-white text-bodyDark dark:bg-[#0E130F] dark:text-[#E2E8F0] pt-16 pb-8 border-t border-sage/10 dark:border-sage/5 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <!-- Overview -->
+        <div class="col-span-1 md:col-span-1 lg:col-span-2">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+            <div
+              class="w-12 h-12 bg-forest dark:bg-sage rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <i class="fa-solid fa-shield-halved text-creamWhite dark:text-forest text-2xl"></i>
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="font-playfair font-bold text-2xl text-headingDark dark:text-creamWhite leading-tight tracking-wide">Safety</span>
+              <span
+                class="text-[10px] tracking-widest uppercase font-inter text-sage dark:text-cheese font-semibold">Compliance
+                Training</span>
+            </div>
+          </a>
+          <p class="text-sm text-mutedDark dark:text-gray-300 mb-6 leading-relaxed max-w-sm">
+            Providing premium, accredited safety and compliance training programs to protect industrial workforces
+            nationwide.
+          </p>
+          <div class="flex space-x-4 rtl:space-x-reverse">
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-span-1 md:col-span-1 lg:col-span-1">
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300">
+            <li><a href="index.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Home</a>
+            </li>
+            <li><a href="home2.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Home 2</a>
+            </li>
+            <li><a href="about.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">About</a>
+            </li>
+            <li><a href="courses.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Courses</a></li>
+            <li><a href="pricing.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Bulk
+                Enrollment</a></li>
+            <li><a href="contact.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="col-span-1 md:col-span-1 lg:col-span-1">
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Course Categories</h4>
+          <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300">
+            <li><a href="courses.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">OSHA
+                Training</a></li>
+            <li><a href="courses.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Fire
+                Safety</a></li>
+            <li><a href="courses.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">First Aid
+                & CPR</a></li>
+            <li><a href="courses.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">HAZWOPER
+                Compliance</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-span-1 md:col-span-1 lg:col-span-1">
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Contact Info</h4>
+          <ul class="space-y-3 text-sm text-mutedDark dark:text-gray-300">
+            <li class="flex items-start space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-map-pin mt-1 text-forest dark:text-sage"></i>
+              <span>100 Compliance Way,<br>Suite 400, Industrial Park, TX 77001</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-phone text-forest dark:text-sage"></i>
+              <span>+1 (800) 555-SAFE</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-envelope text-forest dark:text-sage"></i>
+              <span>training@safety.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div
+        class="border-t border-forest/10 dark:border-sage/20 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-mutedDark dark:text-gray-400">
+        <p>&copy; 2026 Safety Training & Compliance All Rights Reserved.</p>
+        <div class="flex space-x-6 rtl:space-x-reverse mt-4 md:mt-0">
+          <a href="#" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Terms & Conditions</a>
+          <a href="login.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Login Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top"
+    class="w-12 h-12 bg-honey text-forest hover:bg-forest hover:text-creamWhite rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+    aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+
+</html>
